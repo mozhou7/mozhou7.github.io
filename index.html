@@ -2,7 +2,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
 <head>
-    <title>Mo Zhou's Homepage</title>
+    <title>Mo Zhou's Homepage, University of Washington</title>
     <style>
     #header {
         text-align: center;
@@ -22,17 +22,37 @@
         padding:5px;  
         margin-left:150px;     
     }
-</style>
+    </style>
+
+    <script>
+        // List of image filenames
+        const images = [
+            "mozhou-1.jpg",
+            "mozhou-2.jpg",
+            "mozhou-3.jpg"
+        ];
+
+        // Pick a random image on load
+        window.onload = function () {
+            const randomIndex = Math.floor(Math.random() * images.length);
+            const imgElement = document.getElementById("randomImage");
+            imgElement.src = images[randomIndex];
+        };
+    </script>
 </head>
 
 <body>
     <div id="header">
         <table cellspacing="25">
+
             <td>
-                <img src="MoZhou.jpg" width="200" height="274">    
+                <img id="randomImage" src="mozhou-1.jpg" width="200" height="274">    
             </td>
             <td>
                 <h2>Mo Zhou 周墨</h2>
+
+                <!-- <h2>Moving to <a href="https://mozhou7.github.io" >new homepage</a></h2> -->
+
                 Postdoc<br>
                 Institute for Foundations of Data Science (IFDS)<br>
                 University of Washington<br>
@@ -47,7 +67,7 @@
 
     <div id="main">
         <p>
-            I am a postdoc at <a href="https://ifds.info/" target='_blank'> Institute for Foundations of Data Science (IFDS)</a> at University of Washington, where I'm working with <a href="https://simonshaoleidu.com/" target="_blank"> Simon Du</a> and <a href="https://people.ece.uw.edu/fazel_maryam/" target="_blank"> Maryam Fazel</a>. 
+            I am a postdoc at the <a href="https://ifds.info/" target='_blank'> Institute for Foundations of Data Science (IFDS)</a>, University of Washington, where I'm hosted by <a href="https://simonshaoleidu.com/" target="_blank"> Simon Du</a> and <a href="https://people.ece.uw.edu/fazel_maryam/" target="_blank"> Maryam Fazel</a> at the <a href="https://www.cs.washington.edu/" target='_blank'> Paul G. Allen School of Computer Science & Engineering</a>. 
 
             Previously, I received my Ph.D. in Computer Science from Duke University, where I was fortunate to be advised by <a href="https://users.cs.duke.edu/~rongge/" target="_blank"> Rong Ge</a>. Before coming to Duke, I received B.S. in Statistics from <a href="http://english.pku.edu.cn/" target="_blank">Peking University</a>.
         </p>
@@ -68,6 +88,16 @@
         <h2>Publications and Preprints</h2>
             * denotes equal contribution, (&alpha;-&beta; order) denotes alphabetical ordering
             <ul>
+                <li>
+                <a style="text-decoration: none" href="https://arxiv.org/abs/2506.06584" target="_blank">
+                <b>Global Convergence of Gradient EM for Over-Parameterized Gaussian Mixtures</b></a>
+                <br>
+                <b>Mo Zhou</b>*, Weihang Xu*, Maryam Fazel, Simon S. Du.<br>
+                <em>arxiv preprint</em>, 2025.<br>
+                </li>
+                
+                <br>
+
                 <li>
                 <a style="text-decoration: none" href="https://arxiv.org/abs/2406.01766" target="_blank">
                 <b>How Does Gradient Descent Learn Features -- A Local Analysis for Regularized Two-Layer Neural Networks</b></a>
@@ -239,12 +269,12 @@
 
     <div id="footer">
         <p>
-        Last update: Oct. 2024<br>
+        Last update: Jun. 2025<br>
         <!--
         <div style="display:inline-block;width:200px;"><script type="text/javascript" src="//rf.revolvermaps.com/0/0/7.js?i=5r8n992u4ex&amp;m=0&amp;c=ff0000&amp;cr1=ffffff&amp;sx=0" async="async"></script></div>
         -->
 
-        <a href="https://clustrmaps.com/site/1c1p3"  title="Visit tracker"><img src="//www.clustrmaps.com/map_v2.png?d=8E8iZC4fXp9j2i9WmclWCAi6qqu2sw0xExxKmPGsIMc&cl=ffffff" /></a>
+        <a href='https://clustrmaps.com/site/1bxel'  title='Visit tracker'><img src='//clustrmaps.com/map_v2.png?cl=ffffff&w=147&t=n&d=L8lUkdVpMYV6gIoZgqu7QhNnjBZp7ZRyz3cETuF0fw0'/></a>
     </div>
 </body>
 
