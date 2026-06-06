@@ -1,0 +1,248 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Personal academic homepage of Mo Zhou.">
+    <meta property="og:title" content="Mo Zhou's Homepage">
+    <meta property="og:description" content="Personal academic homepage of Mo Zhou.">
+    <meta property="og:type" content="website">
+    <title>Mo Zhou's Homepage, University of Washington</title>
+    <link rel="stylesheet" href="assets/css/site.css">
+    <script src="assets/js/mathjax-config.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+</head>
+
+<body id="top">
+    <nav class="site-nav" aria-label="Primary navigation">
+        <div class="page nav-content">
+            <a class="nav-name" href="#top">Mo Zhou's Homepage</a>
+
+            <div class="nav-links">
+                <a class="nav-link" href="#about">About</a>
+                <a class="nav-link" href="#research-interests">Research</a>
+                <a class="nav-link" href="#publications">Papers</a>
+                <a class="nav-link" href="#service">Service</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="site-header" id="about" aria-labelledby="about-heading">
+        <div class="page profile" data-scroll-target>
+            <div class="profile-card">
+                <div class="profile-photo">
+                    <img id="randomImage" src="mozhou-1.jpg" width="158" height="216" alt="Mo Zhou">
+                </div>
+
+                <h1>Mo Zhou 周墨</h1>
+
+                <!-- <h2>Moving to <a href="https://mozhou7.github.io">new homepage</a></h2> -->
+
+                <p class="profile-role">
+                    IFDS Postdoc<br>
+                    University of Washington<br>
+                </p>
+            </div>
+
+            <div class="profile-intro">
+                <h2 id="about-heading">About Me</h2>
+
+                <p>
+                    Hi, I'm Mo. I am a postdoctoral scholar at the <a href="https://ifds.info/" target="_blank" rel="noopener noreferrer">Institute for Foundations of Data Science (IFDS)</a> and the <a href="https://www.cs.washington.edu/" target="_blank" rel="noopener noreferrer">Paul G. Allen School of Computer Science &amp; Engineering</a> at the University of Washington, hosted by <a href="https://simonshaoleidu.com/" target="_blank" rel="noopener noreferrer">Simon Du</a> and <a href="https://people.ece.uw.edu/fazel_maryam/" target="_blank" rel="noopener noreferrer">Maryam Fazel</a>.
+                </p>
+
+                <p>
+                    I received my Ph.D. in Computer Science from Duke University, where I was fortunate to be advised by <a href="https://users.cs.duke.edu/~rongge/" target="_blank" rel="noopener noreferrer">Rong Ge</a>. Before that, I received my B.S. in Statistics from <a href="http://english.pku.edu.cn/" target="_blank" rel="noopener noreferrer">Peking University</a>.
+                </p>
+
+                <p>
+                    I have also spent time at Stanford with <a href="https://ai.stanford.edu/~tengyuma/" target="_blank" rel="noopener noreferrer">Tengyu Ma</a> (summer 2023), at AWS AI with <a href="https://www.cs.columbia.edu/~lierranli/" target="_blank" rel="noopener noreferrer">Erran Li</a> (summer 2022), and at Georgia Tech with <a href="https://www2.isye.gatech.edu/~tzhao80/" target="_blank" rel="noopener noreferrer">Tuo Zhao</a> (summer 2018).
+                </p>
+
+                <!--
+                <p>
+                    In summer 2023, I worked with <a href="https://ai.stanford.edu/~tengyuma/" target="_blank" rel="noopener noreferrer">Tengyu Ma</a> at Stanford. In summer 2022, I was an applied science intern at AWS AI. In summer 2018, I was an intern working with <a href="https://www2.isye.gatech.edu/~tzhao80/" target="_blank" rel="noopener noreferrer">Tuo Zhao</a> at Georgia Tech.
+                </p>
+                -->
+
+                <p class="about-links">
+                    <a href="mailto:mozhou17@cs.washington.edu">Email</a> |
+                    <a href="https://scholar.google.com/citations?user=j_SEFF8AAAAJ" target="_blank" rel="noopener noreferrer">Google Scholar</a> <!--|
+                    CV-->
+                </p>
+            </div>
+        </div>
+    </header>
+
+    <main class="page">
+        <!-- Research interests module -->
+        <section class="section" id="research-interests" aria-labelledby="research-heading">
+            <div class="section-header" data-scroll-target>
+                <h2 id="research-heading">Research</h2>
+            </div>
+
+            <div id="research-copy" class="research-copy is-collapsible">
+                <!--<p>
+                    My research interests are broadly in optimization, machine learning and deep learning. Recently, I have been particularly interested in deep learning theory, aiming to understand why it works.
+                </p>-->
+                <p>
+                    My research focuses on the optimization and mathematical foundations of modern machine learning, especially large-scale overparameterized models. I study how loss landscapes, training dynamics, and optimizer design shape the behavior of these models.
+                </p>
+
+               
+                <p class="research-question">
+                    A central question motivating my research is: <em>Why do simple algorithms and ideas often work surprisingly well in practice, and what fundamental principles are behind it?</em>
+                </p>
+                <!-- Add longer research-interest text here later. -->
+            </div>
+
+            <!--
+            <div class="action-row">
+                <button
+                    class="toggle-button"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="research-copy"
+                    data-expand-button
+                    data-expand-target="research-copy"
+                    data-collapsed-label="Expand research interests"
+                    data-expanded-label="Collapse research interests"
+                >
+                    Expand research interests
+                </button>
+            </div>
+            -->
+        </section>
+
+        <!-- Publications module -->
+        <section class="section" id="publications" aria-labelledby="publications-heading">
+            <div class="section-header" data-scroll-target>
+                <h2 id="publications-heading">Papers</h2>
+
+                <div class="segmented-control" role="group" aria-label="Paper list view">
+                    <button class="segment-button is-active" type="button" aria-pressed="true" data-paper-view="selected">
+                        Selected
+                    </button>
+                    <button class="segment-button" type="button" aria-pressed="false" data-paper-view="all">
+                        All
+                    </button>
+                </div>
+
+                <p class="paper-view-status" id="paper-view-status" aria-live="polite">Showing recent and selected papers.</p>
+            </div>
+
+            <p class="section-note">* denotes equal contribution, (&alpha;-&beta; order) denotes alphabetical ordering</p>
+
+            <!-- Edit publication entries and selected-paper ordering in data/publications.js. -->
+            <ul id="selected-publications" class="publication-list" aria-label="Recent and selected papers" data-publication-list="selected"></ul>
+
+            <div id="full-publications" hidden>
+                <ul class="publication-list" aria-label="Full publications" data-publication-list="full"></ul>
+            </div>
+
+        </section>
+
+        <!-- Presentations module -->
+        <!--
+        <section class="section" id="presentations" aria-labelledby="presentations-heading">
+            <h2 id="presentations-heading">Presentations</h2>
+
+            <ul class="simple-list">
+                <li>
+                    <b>A Local Convergence Theory for Mildly Over-Parameterized Two-Layer Neural Network</b><br>
+                    COLT 2021, Aug. 2021<br>
+                    Theory of Overparameterized Machine Learning (TOPML) 2021, Apr. 2021<br>
+                    Duke Deep Learning Reading Group, Apr. 2021<br>
+                    THEORINET Journal Club/MODL Reading Group, Feb. 2021<br>
+                </li>
+            </ul>
+        </section>
+        -->
+
+        <!-- Service module -->
+        <section class="section" id="service" aria-labelledby="service-heading">
+            <h2 id="service-heading" data-scroll-target>Service</h2>
+            <div class="subsection">
+                <h3>Organizer</h3>
+                <ul class="simple-list">
+                    <li>
+                        IFDS Seminar Co-organizer: Fall 2025 (with Libin Zhu), Winter 2026, and Spring 2026 (with Weihang Xu).
+                    </li>
+                </ul> 
+            </div>
+
+            <div class="subsection">
+                <h3>Teaching</h3>
+
+                <ul class="simple-list">
+                    <li>
+                        <a href="https://sites.google.com/view/duke-compsci-590-04-spring-202/home" target="_blank" rel="noopener noreferrer"><b>CPS590.04 Machine Learning Algorithms</b></a>, Spring 2021 @ Duke, TA.
+                    </li>
+
+                    <li>
+                        <a href="https://www2.cs.duke.edu/courses/fall20/compsci330/" target="_blank" rel="noopener noreferrer"><b>CPS330 Design and Analysis of Algorithms</b></a>, Fall 2020 @ Duke, TA.
+                    </li>
+
+                    <li>
+                        <a href="https://www2.cs.duke.edu/courses/spring20/compsci330/" target="_blank" rel="noopener noreferrer"><b>CPS330 Design and Analysis of Algorithms</b></a>, Spring 2020 @ Duke, TA.
+                    </li>
+                </ul>
+            </div>
+
+            <div class="subsection">
+                <h3>Reviewing</h3>
+
+                <ul class="simple-list">
+                    <li>
+                        Reviewer for ICML, ICLR, NeurIPS, COLT, STOC, AAAI, AISTATS, CVPR, JMLR, Mathematical Programming, TPAMI, JASA.
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Education module -->
+        <!--
+        <section class="section" id="education" aria-labelledby="education-heading">
+            <h2 id="education-heading">Education</h2>
+
+            <ul class="simple-list">
+                <li>
+                    Duke University, 2019 - 2024<br>
+                    Ph.D. in Computer Science
+                </li>
+
+                <li>
+                    Peking University, 2015 - 2019<br>
+                    B.S. in Statistics
+                </li>
+            </ul>
+        </section>
+        -->
+    </main>
+
+    <footer class="page site-footer">
+        <div class="footer-content">
+            <div>
+                <p>Last updated: Jun. 2026</p>
+                <!--
+                <div style="display:inline-block;width:200px;"><script type="text/javascript" src="//rf.revolvermaps.com/0/0/7.js?i=5r8n992u4ex&amp;m=0&amp;c=ff0000&amp;cr1=ffffff&amp;sx=0" async="async"></script></div>
+                -->
+
+                <!--
+                <a class="map-link" href="https://clustrmaps.com/site/1c1p3" target="_blank" rel="noopener noreferrer" title="ClustrMaps">
+                    <img src="https://www.clustrmaps.com/map_v2.png?d=8E8iZC4fXp9j2i9WmclWCAi6qqu2sw0xExxKmPGsIMc&amp;cl=ffffff" alt="ClustrMaps">
+                </a>
+                -->
+            </div>
+
+            <p class="codex-credit">Site maintained with Codex</p>
+        </div>
+    </footer>
+
+    <script defer src="data/publications.js"></script>
+    <script defer src="assets/js/site.js"></script>
+    <!-- Cloudflare Web Analytics -->
+    <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "135475dd5dfb4ee7baf06778aefa2d65"}'></script>
+    <!-- End Cloudflare Web Analytics -->
+</body>
+</html>
