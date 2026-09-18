@@ -4,9 +4,10 @@ window.PUBLICATIONS = [
         selected: true,
         selectedOrder: 6,
         title: "Learning Orthogonal Multi-Index Models Beyond Small Initialization: Incremental Learning, Competitive Dynamics and Symmetry",
+        url:"https://arxiv.org/abs/2609.10879",
         authors: ["Mo Zhou", "Weihang Xu", "Simon S. Du", "Maryam Fazel"],
         authorsSuffix: ".",
-        venue: "In submission (arxiv coming soon)",
+        venue: "arXiv preprint",
         year: 2026,
         venueSuffix: "."
     },
