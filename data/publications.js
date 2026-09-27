@@ -1,29 +1,39 @@
+// trackingName is a stable, unique Umami event suffix; keep it at most 37 characters.
 // Publication data used by assets/js/site.js. Keep factual publication edits here.
+// The section label groups papers on publications.html; it does not affect the homepage.
+// Display headings and descriptions are configured in data/publication-sections.js.
+// Optional subsection labels (such as "GD" or "EM") group papers within a section.
 window.PUBLICATIONS = [
     {
+        section: "Feature Learning",
+        subsection: "GD",
         selected: true,
         selectedOrder: 6,
+        trackingName: "orthogonal-multi-index",
         title: "Learning Orthogonal Multi-Index Models Beyond Small Initialization: Incremental Learning, Competitive Dynamics and Symmetry",
         url:"https://arxiv.org/abs/2609.10879",
         authors: ["Mo Zhou", "Weihang Xu", "Simon S. Du", "Maryam Fazel"],
         authorsSuffix: ".",
-        venue: "arXiv preprint",
+        venue: "Conference on Neural Information Processing Systems (NeurIPS)",
         year: 2026,
         venueSuffix: "."
     },
     {
+        section: "Feature Learning",
+        subsection: "EM",
         selected: true,
         selectedOrder: 7,
+        trackingName: "high-dimensional-gradient-em",
         title: "Is \\(\\sqrt{d}\\) Separation Necessary for Gradient EM to Learn Gaussian Mixtures in High Dimensions?",
         authors: ["Yiran Zhang", "Mo Zhou", "Weihang Xu", "Maryam Fazel", "Simon S. Du"],
         authorsSuffix: ".",
-        venue: "In submission (arxiv coming soon)",
+        venue: "Conference on Neural Information Processing Systems (NeurIPS)",
         year: 2026,
         venueSuffix: "."
     },
     {
-        selected: true,
-        selectedOrder: 8,
+        section: "Simple Models",
+        trackingName: "long-tail-composition",
         title: "Memorizing Long-tail Data Can Help Generalization Through Composition",
         url: "https://arxiv.org/abs/2510.16322",
         authors: ["Mo Zhou", "Haoyang Ma", "Rong Ge"],
@@ -34,8 +44,9 @@ window.PUBLICATIONS = [
         venueSuffix: "."
     },
     {
-        selected: true,
-        selectedOrder: 9,
+        section: "Feature Learning",
+        subsection: "GD",
+        trackingName: "gaussian-score-matching",
         title: "Convergence Dynamics of Over-Parameterized Score Matching for a Single Gaussian",
         url: "https://arxiv.org/abs/2511.22069",
         authors: ["Yiran Zhang", "Weihang Xu", "Mo Zhou", "Maryam Fazel", "Simon S. Du"],
@@ -45,8 +56,11 @@ window.PUBLICATIONS = [
         venueSuffix: "."
     },
     {
+        section: "Feature Learning",
+        subsection: "EM",
         selected: true,
         selectedOrder: 10,
+        trackingName: "overparameterized-gradient-em",
         title: "Global Convergence of Gradient EM for Over-Parameterized Gaussian Mixtures",
         url: "https://arxiv.org/abs/2506.06584",
         authors: ["Mo Zhou", "Weihang Xu", "Maryam Fazel", "Simon S. Du"],
@@ -57,6 +71,8 @@ window.PUBLICATIONS = [
         venueSuffix: "."
     },
     {
+        section: "PhD Thesis",
+        trackingName: "phd-thesis",
         title: "Optimization Dynamics in Mildly Overparametrized Models",
         url: "https://dukespace.lib.duke.edu/items/5fe5bebd-08ae-4105-a3b6-32a7079dad70",
         authors: ["Mo Zhou"],
@@ -66,8 +82,11 @@ window.PUBLICATIONS = [
         venueSuffix: "."
     },
     {
+        section: "Feature Learning",
+        subsection: "GD",
         selected: true,
         selectedOrder: 20,
+        trackingName: "two-layer-feature-learning",
         title: "How Does Gradient Descent Learn Features -- A Local Analysis for Regularized Two-Layer Neural Networks",
         url: "https://arxiv.org/abs/2406.01766",
         authors: ["Mo Zhou", "Rong Ge"],
@@ -77,6 +96,9 @@ window.PUBLICATIONS = [
         venueSuffix: "."
     },
     {
+        section: "Feature Learning",
+        subsection: "GD",
+        trackingName: "multi-head-clip",
         title: "Multi-head CLIP: Improving CLIP with Diverse Representations and Flat Minima",
         url: "https://openreview.net/forum?id=4jEOdGqVC0",
         authors: ["Mo Zhou", "Xiong Zhou", "Li Erran Li", "Stefano Ermon", "Rong Ge"],
@@ -86,6 +108,8 @@ window.PUBLICATIONS = [
         venueSuffix: "."
     },
     {
+        section: "Simple Models",
+        trackingName: "sparse-linear-regression",
         title: "Implicit Regularization Leads to Benign Overfitting for Sparse Linear Regression",
         url: "https://arxiv.org/abs/2302.00257",
         authors: ["Mo Zhou", "Rong Ge"],
@@ -95,8 +119,10 @@ window.PUBLICATIONS = [
         venueSuffix: "."
     },
     {
+        section: "Simple Models",
         selected: true,
         selectedOrder: 30,
+        trackingName: "edge-of-stability",
         title: "Understanding Edge-of-Stability Training Dynamics with a Minimalist Example",
         url: "https://arxiv.org/abs/2210.03294",
         authors: ["Xingyu Zhu", "Zixuan Wang", "Xiang Wang", "Mo Zhou", "Rong Ge"],
@@ -106,8 +132,11 @@ window.PUBLICATIONS = [
         year: 2023
     },
     {
+        section: "Feature Learning",
+        subsection: "GD",
         selected: true,
         selectedOrder: 40,
+        trackingName: "depth-separation",
         title: "Depth Separation with Multilayer Mean-Field Networks",
         url: "https://arxiv.org/abs/2304.01063",
         authors: ["Yunwei Ren", "Mo Zhou", "Rong Ge"],
@@ -120,6 +149,8 @@ window.PUBLICATIONS = [
         noteSuffix: "."
     },
     {
+        section: "Simple Models",
+        trackingName: "monotonic-interpolation",
         title: "Plateau in Monotonic Linear Interpolation -- A \"Biased\" View of Loss Landscape for Deep Networks",
         url: "https://arxiv.org/abs/2210.01019",
         authors: ["Xiang Wang", "Annie N. Wang", "Mo Zhou", "Rong Ge"],
@@ -128,6 +159,8 @@ window.PUBLICATIONS = [
         year: 2023
     },
     {
+        section: "Simple Models",
+        trackingName: "self-supervised-topic-modeling",
         title: "Understanding The Robustness of Self-supervised Learning Through Topic Modeling",
         url: "https://arxiv.org/abs/2203.03539",
         authors: ["Zeping Luo", "Shiyou Wu", "Cindy Weng", "Mo Zhou", "Rong Ge"],
@@ -136,9 +169,11 @@ window.PUBLICATIONS = [
         year: 2023
     },
     {
+        section: "Feature Learning",
+        subsection: "GD",
+        trackingName: "tensor-decomposition",
         title: "Understanding Deflation Process in Over-parametrized Tensor Decomposition",
         url: "https://arxiv.org/abs/2106.06573",
-        authorOrder: "alpha-beta",
         authors: ["Rong Ge", "Yunwei Ren", "Xiang Wang", "Mo Zhou"],
         equalContribution: ["Rong Ge", "Yunwei Ren", "Xiang Wang", "Mo Zhou"],
         venue: "Conference on Neural Information Processing Systems (NeurIPS)",
@@ -146,8 +181,11 @@ window.PUBLICATIONS = [
         venueSuffix: "."
     },
     {
+        section: "Feature Learning",
+        subsection: "GD",
         selected: true,
         selectedOrder: 50,
+        trackingName: "local-convergence-two-layer",
         title: "A Local Convergence Theory for Mildly Over-Parameterized Two-Layer Neural Network",
         url: "https://arxiv.org/abs/2102.02410",
         authors: ["Mo Zhou", "Rong Ge", "Chi Jin"],
@@ -156,6 +194,8 @@ window.PUBLICATIONS = [
         venueSuffix: "."
     },
     {
+        section: "Simple Models",
+        trackingName: "residual-shortcuts",
         title: "Towards Understanding the Importance of Shortcut Connections in Residual Networks",
         url: "https://arxiv.org/abs/1909.04653",
         authors: ["Tianyi Liu", "Minshuo Chen", "Mo Zhou", "Simon S. Du", "Enlu Zhou", "Tuo Zhao"],
@@ -165,8 +205,10 @@ window.PUBLICATIONS = [
         venueSuffix: "."
     },
     {
+        section: "Simple Models",
         selected: true,
         selectedOrder: 60,
+        trackingName: "training-noise",
         title: "Towards Understanding the Importance of Noise in Training Neural Networks",
         url: "https://arxiv.org/abs/1909.03172",
         authors: ["Mo Zhou", "Tianyi Liu", "Yan Li", "Dachao Lin", "Enlu Zhou", "Tuo Zhao"],

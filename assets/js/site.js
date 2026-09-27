@@ -45,6 +45,10 @@ function setupAnchorNavigation() {
         link.addEventListener("click", (event) => {
             const hash = link.getAttribute("href");
             event.preventDefault();
+            // Track manually so Umami's link handling preserves smooth scrolling.
+            if (window.umami && typeof window.umami.track === "function") {
+                window.umami.track(getClickEventName(link.dataset.clickName), { label: link.textContent.trim(), url: hash });
+            }
             scrollToAnchor(hash);
 
             if (hash && hash !== window.location.hash) {
@@ -139,9 +143,14 @@ function createPublicationItem(publication) {
     if (publication.url) {
         const link = document.createElement("a");
         link.href = publication.url;
-        link.target = "_blank";
         link.rel = "noopener noreferrer";
         link.textContent = publication.title;
+        // A URL-based fallback also gives newly added papers their own event.
+        const trackingName = publication.trackingName || new URL(publication.url, window.location.href)
+            .pathname.split("/").filter(Boolean).pop().slice(0, 37);
+        link.setAttribute("data-umami-event", getClickEventName(`paper-${trackingName}`));
+        link.setAttribute("data-umami-event-title", publication.title);
+        link.setAttribute("data-umami-event-url", publication.url);
         title.appendChild(link);
     } else {
         title.textContent = publication.title;
@@ -180,18 +189,19 @@ function renderPublications() {
     const publications = Array.isArray(window.PUBLICATIONS) ? window.PUBLICATIONS : [];
     const selectedList = document.getElementById("selected-publications");
     const fullList = document.querySelector("#full-publications .publication-list");
-    if (!selectedList || !fullList) {
+    if (!selectedList) {
         return;
     }
 
-    const fullItems = publications.map((publication) => createPublicationItem(publication));
     const selectedItems = publications
         .map((publication, index) => ({ publication, index }))
         .filter(({ publication }) => publication.selected)
         .sort(compareSelectedPublications)
         .map(({ publication }) => createPublicationItem(publication));
 
-    fullList.replaceChildren(...fullItems);
+    if (fullList) {
+        fullList.replaceChildren(...publications.map(createPublicationItem));
+    }
     selectedList.replaceChildren(...selectedItems);
 }
 
@@ -272,9 +282,33 @@ function setupExpandButtons() {
     });
 }
 
+function getClickEventName(name) {
+    const page = document.body.classList.contains("publications-page") ? "papers" : "home";
+    return `${page}-${name}`;
+}
+
+function setupLinkTracking() {
+    // Each control has a stable name, independent of its visible wording.
+    // https://docs.umami.is/docs/track-events
+    document.querySelectorAll("[data-click-name]").forEach((element) => {
+        const href = element.getAttribute("href");
+        // These links are tracked inside the smooth-scroll handler instead.
+        if (element.matches('.site-nav a[href^="#"]')) {
+            return;
+        }
+
+        element.setAttribute("data-umami-event", getClickEventName(element.dataset.clickName));
+        element.setAttribute("data-umami-event-label", element.textContent.trim());
+        if (href) {
+            element.setAttribute("data-umami-event-url", href);
+        }
+    });
+}
+
 document.addEventListener("DOMContentLoaded", () => {
     setRandomProfileImage();
     renderPublications();
+    setupLinkTracking();
     setupPaperViewControls();
     setupExpandButtons();
     setupAnchorNavigation();

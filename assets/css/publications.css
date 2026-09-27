@@ -1,0 +1,52 @@
+/* Additional styles for publications.html only; shared paper styles stay in site.css. */
+.publications-heading {
+    padding: 28px 0 18px;
+    border-bottom: 1px solid var(--border);
+}
+
+.publications-heading h1 {
+    margin: 0 0 8px;
+    font-size: 1.5rem;
+    line-height: 1.25;
+}
+
+.publications-heading .section-note {
+    margin: 0;
+}
+
+.publications-page .nav-link:focus-visible,
+.publications-page .nav-name:focus-visible,
+.publications-page .paper-title a:focus-visible {
+    outline: 2px solid var(--accent-strong);
+    outline-offset: 3px;
+}
+
+.publications-page .section-header {
+    display: block;
+    margin-bottom: 12px;
+}
+
+.publication-section-description {
+    margin: 6px 0 0;
+    color: var(--muted);
+    font-size: 0.96rem;
+    line-height: 1.5;
+}
+
+.publication-subsection + .publication-subsection {
+    margin-top: 18px;
+}
+
+.publication-subsection h3 {
+    margin: 0 0 8px;
+    color: var(--muted);
+    font-size: 0.98rem;
+    font-weight: 700;
+    line-height: 1.35;
+}
+
+@media (max-width: 720px) {
+    .publications-heading {
+        padding-top: 24px;
+    }
+}
